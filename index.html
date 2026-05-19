@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b2618eae9a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <div class="formWrapper">
+            <div class="formText">
+                <div class="icon">
+                    <i class="fa-regular fa-envelope"></i>
+                </div>
+                <h2>Contact Us</h2>
+                <p>Fill out the form below and we'll get back to you soon.</p>
+            </div>
+
+            <form class="form-container" novalidate>
+                <div class="name-row">
+                    <div>
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" placeholder="Adelaja">
+                        <p class="inline-error" id="firstName-error"></p>
+                    </div>
+                    <div>
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" placeholder="Caleb">
+                        <p class="inline-error" id="lastName-error"></p>
+                    </div>
+                </div>
+                
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                    <p class="inline-error" id="email-error"></p>
+                </div>
+                
+                <div>
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" placeholder="Enter your message" rows="4"></textarea>
+                    <p class="inline-error" id="message-error"></p>
+                </div>
+                
+                <div class="checkbox">
+                    <input type="checkbox" id="checkbox">
+
+                    <label for="checkbox">
+                        As you check you agree to our terms and policy
+                    </label>
+                </div>
+                <p class="inline-error" id="checkbox-error"></p>
+
+                <div class="button-overlay">
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="success-submit">
+            <div>
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3>Message Sent!</h3>
+            <p>Thanks for reaching out we will get in touch with you soon!</p>
+            <button class="button-reset" id="btn-reset">Send Another Message</button>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
