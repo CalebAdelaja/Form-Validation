@@ -57,7 +57,7 @@ main {
     min-height: 100vh;
     animation-name: fade-in;
     animation-timing-function: ease-in;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
 }
 
 .form-container {
