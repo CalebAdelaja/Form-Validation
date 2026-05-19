@@ -19,14 +19,14 @@ messageInput.addEventListener("input", () => {
     messageError.textContent = "";
 });
 
-btnReset.addEventListener("click", function() {
+btnReset.addEventListener("click", () => {
     formContainer.style.display = "block";
     formWrapper.style.display = "block";
     successSubmit.style.display = "none";
     formContainer.reset();
 });
 
-formContainer.addEventListener("submit", function(event){
+formContainer.addEventListener("submit", (event) => {
     event.preventDefault();//prevent the default form submission behavior, which would typically involve sending the form data to a server and refreshing the page. By calling event.preventDefault(), we can handle the form submission using JavaScript without causing a page reload, allowing us to perform validation and provide feedback to the user without interrupting their experience.
     const emailInput = document.getElementById("email");
     const messageInput = document.getElementById("message");
@@ -63,7 +63,7 @@ formContainer.addEventListener("submit", function(event){
         return false;
     }
 
-    if (!emailInput.value.trim().includes("@gmail.com")) {
+    if (!emailInput.value.trim().includes("@")) {
         emailError.textContent = "Enter a valid email address";
         return false;
     }
