@@ -40,7 +40,7 @@ formContainer.addEventListener("submit", (event) => {
     const lastNameError = document.getElementById("lastName-error");
 
    if (firstNameInput.value.trim() === "") {
-        firstNameError.textContent = "First Name cannot be empty";
+        firstNameError.textContent = "First Name is required";
         return false;
     }
 
@@ -52,7 +52,7 @@ formContainer.addEventListener("submit", (event) => {
     }
 
     if (lastNameInput.value.trim() === "") {
-        lastNameError.textContent = "Last Name cannot be empty";
+        lastNameError.textContent = "Last Name is required";
         return false;
     }else{
         lastNameError.textContent = "";
